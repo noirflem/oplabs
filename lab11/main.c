@@ -5,7 +5,7 @@
 int main(){
 
     struct Parallelogram ParCoords;
-    printf("Fill in the coordinates of the vertices from the upper left corner, clockwise\n");
+    printf("Enter coodinates:\n");
     scanf("%d %d", &ParCoords.x1, &ParCoords.y1);
     scanf("%d %d", &ParCoords.x2, &ParCoords.y2);
     scanf("%d %d", &ParCoords.x3, &ParCoords.y3);
