@@ -11,10 +11,9 @@ int main() {
     FILE *file = fopen("path.txt", "w");
     int a;
     int b;
-    scanf("%d", &a);
-    scanf("%d", &b);
+    scanf("%d %d", &a, &b);
     fprintf(file, "The result of sum: %d", sum(a, b));
     fclose(file);
     return 0;
-    
+
 }
