@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "math.h"
+
 enum Cars {
 
     car,
@@ -16,29 +17,29 @@ struct BF {
 };
 
 struct Square {
-    
+
     int a;
-    float x;
-    float y;
+    int x;
+    int y;
 
 };
 
-double S(struct Square A) {
+int S(struct Square *A) {
 
-    return A.a*A.a;
+    return A->a * A->a;
+
+}
+
+int P(struct Square *A) {
+
+    return A->a * 4;
 
 }
 
-double P(int a) {
+int Perim(struct Square *A, struct Square *B) {
 
-    return a * 4;
+    return sqrtf(powf(B->x - A->x, 2) + powf(B->y - A->y, 2)) * 4;
 
-}
-void Perim(struct Square A, struct Square B){
-
-    int per;
-    per = sqrtf(powf(B.x - A.x, 2) + powf(B.y - A.y, 2)) * 4;
-    printf("perimeter of the square is: %d\n", per);
 }
 
 int main() {
@@ -52,9 +53,14 @@ int main() {
     printf("\n");
 
     //Задание №2
-    struct Square A = { 3, 4};
-    struct Square B = { 2, 5};
-    Perim(A, B);
+    struct Square sq;
+    scanf("%d", &sq.a);
+    printf("S = %d\n", S(&sq));
+    printf("P = %d\n", P(&sq));
+    struct Square A = {3, 4};
+    struct Square B = {2, 5};
+    printf("P with coords = %d\n", Perim(&A,&B));
+
 
     //Задание №3
     struct BF bf;
