@@ -16,15 +16,16 @@ struct BF {
 };
 
 struct Square {
-
+    
+    int a;
     float x;
     float y;
 
 };
 
-double S(int a) {
+double S(struct Square A) {
 
-    return a * a;
+    return A.a*A.a;
 
 }
 
