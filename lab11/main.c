@@ -11,8 +11,8 @@ int main(){
     scanf("%d %d", &ParCoords.x3, &ParCoords.y3);
     scanf("%d %d", &ParCoords.x4, &ParCoords.y4);
 
-    int s = S(ParCoords);
-    int p = P(ParCoords);
+    int s = S(&ParCoords);
+    int p = P(&ParCoords);
 
     printf("%d\n", s);
     printf("%d\n", p);
